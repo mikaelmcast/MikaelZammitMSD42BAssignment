@@ -5,6 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     float xMin, xMax, yMin, yMax;
+    float test = 5f;
+
+    [SerializeField] float PlayerMovingSpeed = 10f;
 
 
     // Start is called before the first frame update
@@ -17,7 +20,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Move();
+    }
 
+    private void Move()
+    {
+        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * PlayerMovingSpeed;
+
+        var newXpos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
+
+        this.transform.position = new Vector2(newXpos, transform.position.y);
     }
 
     private void SetUpMoveBounderies()
