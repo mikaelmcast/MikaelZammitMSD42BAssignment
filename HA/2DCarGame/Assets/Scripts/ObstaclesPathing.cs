@@ -36,7 +36,7 @@ public class ObstaclesPathing : MonoBehaviour
 
             targetPosition.z = 0f;
 
-            var obstacleMovement = ObstacleSpeed * Time.deltaTime;
+            var obstacleMovement = waveConfig.GetObstacleSpeed() * Time.deltaTime; 
 
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, obstacleMovement);
 
@@ -49,5 +49,10 @@ public class ObstaclesPathing : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void SetWaveConfig(ObstacleWave waveConfigToBeSet)
+    {
+        waveConfig = waveConfigToBeSet;
     }
 }

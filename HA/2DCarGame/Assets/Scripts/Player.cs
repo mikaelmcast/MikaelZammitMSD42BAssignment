@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] float PlayerMovingSpeed = 10f;
 
+   
+
 
     // Start is called before the first frame update
     void Start()

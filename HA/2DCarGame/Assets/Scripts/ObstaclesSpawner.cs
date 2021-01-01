@@ -6,15 +6,18 @@ public class ObstaclesSpawner : MonoBehaviour
 {
     [SerializeField] List<ObstacleWave> waveConfigList;
 
+    [SerializeField] bool looping = false;
 
     int FirstWave = 0;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        var currentWave = waveConfigList[FirstWave];
-
-        StartCoroutine(SpawnAllObstaclesInWave(currentWave));   
+        do
+        {
+            yield return StartCoroutine(SpawnAllWaves());
+        }
+        while (looping);
 
     }
 
@@ -26,11 +29,28 @@ public class ObstaclesSpawner : MonoBehaviour
 
     private IEnumerator SpawnAllObstaclesInWave(ObstacleWave waveConfig)
     {
-        Instantiate(
-            waveConfig.GetObstaclesPrefab(),
-            waveConfig.GetWayPoints()[0].transform.position,
-            Quaternion.identity);
+        for (int obstacleCount = 1; obstacleCount <= waveConfig.GetnumberOfObstacles(); obstacleCount++)
+        {
+           var newObstacle = Instantiate(
+                                waveConfig.GetObstaclesPrefab(),
+                                waveConfig.GetWayPoints()[0].transform.position,
+                                Quaternion.identity);
 
-        yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawning());
+            newObstacle.GetComponent<ObstaclesPathing>().SetWaveConfig(waveConfig);
+
+
+
+            yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawning());
+        } 
+        
     }
+
+    private IEnumerator SpawnAllWaves()
+    {
+        foreach (ObstacleWave currentWave in waveConfigList)
+        {
+            yield return StartCoroutine(SpawnAllObstaclesInWave(currentWave));
+        }
+    }
+
 }

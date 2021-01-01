@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5171867957920418222}
   - component: {fileID: 5171867957920418225}
+  - component: {fileID: -5857861923075010853}
+  - component: {fileID: 7912501540088895699}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Untagged
@@ -82,3 +84,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5857861923075010853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171867957920418224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d61871fe1f5e9949968a7b493ad6234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclesWaypoints: []
+  ObstacleSpeed: 2
+  waveConfig: {fileID: 11400000, guid: a77f821f4d6490d4fac1c94a1c5071d4, type: 2}
+--- !u!114 &7912501540088895699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171867957920418224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef5499b3350ccd46bda722f4035ef5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 4
