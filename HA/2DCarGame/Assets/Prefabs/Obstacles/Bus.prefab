@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7283836458859897769}
   - component: {fileID: 4871322490266797654}
   - component: {fileID: -6935742199294710707}
-  - component: {fileID: 5217432979887795118}
   - component: {fileID: -304611971305206462}
+  - component: {fileID: -7964267887943853844}
   m_Layer: 0
   m_Name: Bus
   m_TagString: Untagged
@@ -114,19 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!114 &5217432979887795118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4555602707199730578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a281c900a22065b40bcbcacf36b373f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletDamage: 1
 --- !u!60 &-304611971305206462
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -190,3 +177,20 @@ PolygonCollider2D:
       - {x: 0.71, y: -4.49}
       - {x: 1.11, y: -4.42}
       - {x: 1.25, y: -4.29}
+--- !u!114 &-7964267887943853844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4555602707199730578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a281c900a22065b40bcbcacf36b373f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  obstacleBulletPrefab: {fileID: 2041179304141708746, guid: 5b16a9ad7122bad46bf94f38d1682ccb, type: 3}
+  obstacleBulletSpeed: 5

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 484812945148468912}
   - component: {fileID: 5749404958334428808}
   - component: {fileID: -4236417506103055748}
-  - component: {fileID: 1624835374340851642}
   - component: {fileID: -9052721459089119207}
+  - component: {fileID: -1716615218245154160}
   m_Layer: 0
   m_Name: Police
   m_TagString: Untagged
@@ -114,19 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
---- !u!114 &1624835374340851642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736282865664410426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a281c900a22065b40bcbcacf36b373f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletDamage: 1
 --- !u!60 &-9052721459089119207
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -218,3 +205,20 @@ PolygonCollider2D:
       - {x: 0.53999996, y: -2.95}
       - {x: 0.65, y: -2.9099998}
       - {x: 0.87, y: -2.81}
+--- !u!114 &-1716615218245154160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736282865664410426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a281c900a22065b40bcbcacf36b373f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  obstacleBulletPrefab: {fileID: 2041179304141708746, guid: 5b16a9ad7122bad46bf94f38d1682ccb, type: 3}
+  obstacleBulletSpeed: 5
