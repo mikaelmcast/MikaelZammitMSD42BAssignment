@@ -97,7 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerMovingSpeed: 10
-  health: 3
+  health: 50
+  playerDeathSound: {fileID: 8300000, guid: fb9dda40b7151e54b953490bd259c8ad, type: 3}
+  playerDeathSoundVolume: 0.6
 --- !u!60 &4972782217977877111
 PolygonCollider2D:
   m_ObjectHideFlags: 0

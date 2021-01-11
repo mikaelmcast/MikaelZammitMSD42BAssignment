@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4236417506103055748}
   - component: {fileID: -9052721459089119207}
   - component: {fileID: -1716615218245154160}
+  - component: {fileID: -7063507574797718850}
   m_Layer: 0
   m_Name: Police
   m_TagString: Untagged
@@ -218,7 +219,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotCounter: 0
-  minTimeBetweenShots: 0.2
+  minTimeBetweenShots: 0.5
   maxTimeBetweenShots: 3
   obstacleBulletPrefab: {fileID: 2041179304141708746, guid: 5b16a9ad7122bad46bf94f38d1682ccb, type: 3}
-  obstacleBulletSpeed: 5
+  obstacleBulletSpeed: 4
+--- !u!50 &-7063507574797718850
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736282865664410426}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

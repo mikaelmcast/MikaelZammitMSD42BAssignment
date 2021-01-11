@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] float health = 500f;
 
+    [SerializeField] AudioClip playerDeathSound;
+    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
+
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
         DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
@@ -22,10 +25,19 @@ public class Player : MonoBehaviour
     {
         health -= dmgDealer.GetDamage();
 
+        AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+
         if (health <=0)
         {
-            Destroy(gameObject);
+            Destroyed();
         }
+    }
+
+    private void Destroyed()
+    {
+        Destroy(gameObject);
+
+        FindObjectOfType<Level>().LoadGameOver();
     }
 
 
