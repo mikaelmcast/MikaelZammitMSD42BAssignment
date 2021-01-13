@@ -19,6 +19,9 @@ public class Obstacles : MonoBehaviour
     [SerializeField] AudioClip ObstacleDeathSound;
     [SerializeField] [Range(0, 1)] float ObstacleDeathSoundVolume = 0.75f;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
+
     // Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D otherObject)
@@ -74,5 +77,9 @@ public class Obstacles : MonoBehaviour
     private void Destroyed()
     {
         Destroy(gameObject);
+
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+
+        Destroy(explosion, explosionDuration);
     }
 }
