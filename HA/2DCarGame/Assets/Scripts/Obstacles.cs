@@ -22,6 +22,8 @@ public class Obstacles : MonoBehaviour
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration = 1f;
 
+    [SerializeField] int scoreValue = 5;
+
     // Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D otherObject)
@@ -81,5 +83,7 @@ public class Obstacles : MonoBehaviour
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
 
         Destroy(explosion, explosionDuration);
+
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
     }
 }

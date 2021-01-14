@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -399755550416128788}
   - component: {fileID: 7538449679801001804}
   - component: {fileID: 5545408220101564301}
+  - component: {fileID: -307508260433039070}
+  - component: {fileID: 5189364365910655911}
   m_Layer: 11
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -162,3 +164,62 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!60 &-307508260433039070
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041179304141708746}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.87, y: 0.71999997}
+      - {x: 0.84, y: 0.77}
+      - {x: 0.78999996, y: 0.78999996}
+      - {x: 0.78999996, y: 1.31}
+      - {x: 0.71999997, y: 1.65}
+      - {x: 0.65, y: 1.8399999}
+      - {x: 0.47, y: 2.1599998}
+      - {x: 0.37, y: 2.29}
+      - {x: 0.08, y: 2.56}
+      - {x: -0.08, y: 2.56}
+      - {x: -0.37, y: 2.29}
+      - {x: -0.55, y: 2.02}
+      - {x: -0.7, y: 1.74}
+      - {x: -0.79999995, y: 1.31}
+      - {x: -0.81, y: 0.78}
+      - {x: -0.85999995, y: 0.75}
+      - {x: -0.87, y: 0.72999996}
+      - {x: -0.87, y: -2.53}
+      - {x: -0.83, y: -2.56}
+      - {x: 0.84, y: -2.56}
+      - {x: 0.87, y: -2.55}
+--- !u!114 &5189364365910655911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041179304141708746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69d24381c8ace844acd59ed4c228c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1

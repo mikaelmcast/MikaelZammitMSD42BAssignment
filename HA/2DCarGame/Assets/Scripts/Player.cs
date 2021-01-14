@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip playerDeathSound;
     [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
+
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
         DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
@@ -36,6 +39,10 @@ public class Player : MonoBehaviour
     private void Destroyed()
     {
         Destroy(gameObject);
+
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+
+        Destroy(explosion, explosionDuration);
 
         FindObjectOfType<Level>().LoadGameOver();
     }

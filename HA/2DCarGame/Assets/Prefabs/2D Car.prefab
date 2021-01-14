@@ -101,6 +101,8 @@ MonoBehaviour:
   health: 50
   playerDeathSound: {fileID: 8300000, guid: e607a345eaf418c4e83c90847e8a1e69, type: 3}
   playerDeathSoundVolume: 0.6
+  deathVFX: {fileID: 845900099743038036, guid: 4ada8487e81c2e444931337b40788940, type: 3}
+  explosionDuration: 1
 --- !u!60 &4972782217977877111
 PolygonCollider2D:
   m_ObjectHideFlags: 0
