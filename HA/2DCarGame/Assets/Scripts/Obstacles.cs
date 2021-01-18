@@ -83,7 +83,5 @@ public class Obstacles : MonoBehaviour
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
 
         Destroy(explosion, explosionDuration);
-
-        FindObjectOfType<GameSession>().AddToScore(scoreValue);
     }
 }
